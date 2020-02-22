@@ -22,7 +22,7 @@ public class ClientLobby : MonoBehaviourPunCallbacks
 
     public override void OnConnectedToMaster()
     {
-        Debug.Log("Client connected to server in " + PhotonNetwork.CloudRegion + " at " + DateTime.Now.ToLocalTime());
+        Debug.Log("Client connected to server in " + PhotonNetwork.CloudRegion + " at " + DateTime.Now.ToLocalTime() + " ");
     }
 
     public void Quickplay()

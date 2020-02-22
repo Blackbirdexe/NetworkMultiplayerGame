@@ -5,25 +5,35 @@ using UnityEngine.UI;
 
 public class Console : MonoBehaviour
 {
-    Text consoleTextBox;
+    public Text consoleTextBox;
+    public GameObject console;
+    public static GameObject consoleCanvas;
 
     static string myLog = "";
     private string output;
     private string stack;
 
-    private void OnEnable()
-    {
-        Application.logMessageReceived += Log;
-    }
 
-    private void OnDisable()
-    {
-        Application.logMessageReceived -= Log;
-    }
 
     private void Start()
     {
-        consoleTextBox = this.GetComponent<Text>();
+        consoleCanvas = this.gameObject;
+        DontDestroyOnLoad(consoleCanvas);
+        //consoleTextBox = this.GetComponent<Text>();
+        Application.logMessageReceived += Log;
+    }
+
+
+    public void ActivateConsoleLog()
+    {
+        if (console.activeInHierarchy == false)
+        {
+            console.SetActive(true);
+        }
+        else if (console.activeInHierarchy == true)
+        {
+            console.SetActive(false);
+        }
     }
 
     public void Log(string logString, string stackTrace, LogType type)
@@ -37,5 +47,6 @@ public class Console : MonoBehaviour
         }
         consoleTextBox.text = myLog;
     }
+    
 
 }
