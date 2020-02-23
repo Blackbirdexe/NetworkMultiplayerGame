@@ -8,6 +8,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 4609f11e43aee2b4eadd796710786df1
+  - enabled: 1
+    path: Assets/Scenes/WaitingRoomScene.unity
+    guid: 1814674865c18754a86694fde3d4c591
+  - enabled: 0
+    path: Assets/Scenes/PlayingScene.unity
+    guid: 325a4202d6426b64a9342161caa7d73f
+  - enabled: 0
+    path: Assets/Scenes/KillerScene.unity
+    guid: 3080baa37780be142b5ef661d349053e
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/SurvivorScene.unity
+    guid: 80610453e62ebe54cb1a1e412ff3aa45
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 7624b075a5aedcd48a99305e95e1f7de,
       type: 2}

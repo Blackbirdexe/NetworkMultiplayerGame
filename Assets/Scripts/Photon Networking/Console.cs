@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Console : MonoBehaviour
 {
+    public static Console consoleInstance;
     public Text consoleTextBox;
     public GameObject console;
     public static GameObject consoleCanvas;
@@ -17,6 +18,15 @@ public class Console : MonoBehaviour
 
     private void Start()
     {
+        if (consoleInstance == null)
+        {
+            consoleInstance = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+
         consoleCanvas = this.gameObject;
         DontDestroyOnLoad(consoleCanvas);
         //consoleTextBox = this.GetComponent<Text>();
